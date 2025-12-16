@@ -1,9 +1,9 @@
-package com.devtiro.blog.Controllers;
+package com.devtiro.blog.controller;
 
-import com.devtiro.blog.Domain.Dtos.CreateTagsRequest;
-import com.devtiro.blog.Domain.Dtos.TagDto;
-import com.devtiro.blog.Domain.Entities.Tag;
-import com.devtiro.blog.Mappers.TagMapper;
+import com.devtiro.blog.domain.Dtos.CreateTagsRequest;
+import com.devtiro.blog.domain.Dtos.TagDto;
+import com.devtiro.blog.domain.Entities.Tag;
+import com.devtiro.blog.mapper.TagMapper;
 import com.devtiro.blog.Services.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,9 @@
-package com.devtiro.blog.Controllers;
+package com.devtiro.blog.controller;
 
-import com.devtiro.blog.Domain.Dtos.CategoryDto;
-import com.devtiro.blog.Domain.Dtos.CreateCategoryRequest;
-import com.devtiro.blog.Domain.Entities.Category;
-import com.devtiro.blog.Mappers.CategoryMapper;
+import com.devtiro.blog.domain.Dtos.CategoryDto;
+import com.devtiro.blog.domain.Dtos.CreateCategoryRequest;
+import com.devtiro.blog.domain.Entities.Category;
+import com.devtiro.blog.mapper.CategoryMapper;
 import com.devtiro.blog.Services.CategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

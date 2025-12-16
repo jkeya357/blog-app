@@ -1,6 +1,6 @@
 package com.devtiro.blog.Services.impl;
 
-import com.devtiro.blog.Domain.Entities.Category;
+import com.devtiro.blog.domain.Entities.Category;
 import com.devtiro.blog.Services.CategoryService;
 import com.devtiro.blog.repositories.CategoryRepository;
 import jakarta.persistence.EntityNotFoundException;

@@ -1,10 +1,10 @@
-package com.devtiro.blog.Mappers;
+package com.devtiro.blog.mapper;
 
-import com.devtiro.blog.Domain.Dtos.CategoryDto;
-import com.devtiro.blog.Domain.Dtos.CreateCategoryRequest;
-import com.devtiro.blog.Domain.Entities.Category;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.PostStatus;
+import com.devtiro.blog.domain.Dtos.CategoryDto;
+import com.devtiro.blog.domain.Dtos.CreateCategoryRequest;
+import com.devtiro.blog.domain.Entities.Category;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.PostStatus;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

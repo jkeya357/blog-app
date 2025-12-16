@@ -1,6 +1,6 @@
 package com.devtiro.blog.Services;
 
-import com.devtiro.blog.Domain.Entities.Category;
+import com.devtiro.blog.domain.Entities.Category;
 
 import java.util.List;
 import java.util.UUID;

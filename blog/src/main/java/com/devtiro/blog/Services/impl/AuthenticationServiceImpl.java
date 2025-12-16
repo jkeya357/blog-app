@@ -1,11 +1,10 @@
 package com.devtiro.blog.Services.impl;
 
-import com.devtiro.blog.Domain.Entities.User;
+import com.devtiro.blog.domain.Entities.User;
 import com.devtiro.blog.Services.AuthenticationService;
 import com.devtiro.blog.repositories.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,7 +30,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private String secretKey;
 
     private final Long jwtExpiryMs = 86400000L;
-    private final Long jwtRefreshMs = 72460601000L;
 
     @Override
     public User authenticate(String email, String password) {
@@ -57,17 +55,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .compact();
 
     }
-
-
-    public UserDetails validateRefreshToken(String token){
-        String username = extractUsername(token);
-
-        Jwts.parser()
-                .verifyWith(getSigningKey())
-                .build()
-                .parseSignedClaims(token);
-        return  userDetailsService.loadUserByUsername(username);
-    }
+    
 
     @Override
     public UserDetails validateToken(String token) {

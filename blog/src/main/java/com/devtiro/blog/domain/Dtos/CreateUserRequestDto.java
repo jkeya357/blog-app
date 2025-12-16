@@ -1,6 +1,5 @@
-package com.devtiro.blog.Domain.Dtos;
+package com.devtiro.blog.domain.Dtos;
 
-import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;

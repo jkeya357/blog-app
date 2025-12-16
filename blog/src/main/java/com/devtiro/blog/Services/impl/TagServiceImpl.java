@@ -1,6 +1,6 @@
 package com.devtiro.blog.Services.impl;
 
-import com.devtiro.blog.Domain.Entities.Tag;
+import com.devtiro.blog.domain.Entities.Tag;
 import com.devtiro.blog.Services.TagService;
 import com.devtiro.blog.repositories.TagRepository;
 import jakarta.persistence.EntityNotFoundException;

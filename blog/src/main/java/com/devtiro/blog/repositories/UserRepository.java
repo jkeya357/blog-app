@@ -1,6 +1,6 @@
 package com.devtiro.blog.repositories;
 
-import com.devtiro.blog.Domain.Entities.User;
+import com.devtiro.blog.domain.Entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

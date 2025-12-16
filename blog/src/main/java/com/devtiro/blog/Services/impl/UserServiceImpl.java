@@ -1,8 +1,7 @@
 package com.devtiro.blog.Services.impl;
 
-import com.devtiro.blog.Domain.Dtos.CreateUserRequest;
-import com.devtiro.blog.Domain.Dtos.CreateUserRequestDto;
-import com.devtiro.blog.Domain.Entities.User;
+import com.devtiro.blog.domain.Dtos.CreateUserRequest;
+import com.devtiro.blog.domain.Entities.User;
 import com.devtiro.blog.Services.UserService;
 import com.devtiro.blog.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;

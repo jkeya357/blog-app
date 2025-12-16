@@ -1,14 +1,12 @@
-package com.devtiro.blog.Controllers;
+package com.devtiro.blog.controller;
 
-import com.devtiro.blog.Domain.Dtos.CreateUserRequest;
-import com.devtiro.blog.Domain.Dtos.CreateUserRequestDto;
-import com.devtiro.blog.Domain.Dtos.UserDto;
-import com.devtiro.blog.Domain.Entities.User;
-import com.devtiro.blog.Mappers.UserMapper;
+import com.devtiro.blog.domain.Dtos.CreateUserRequest;
+import com.devtiro.blog.domain.Dtos.CreateUserRequestDto;
+import com.devtiro.blog.domain.Dtos.UserDto;
+import com.devtiro.blog.domain.Entities.User;
+import com.devtiro.blog.mapper.UserMapper;
 import com.devtiro.blog.Services.UserService;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

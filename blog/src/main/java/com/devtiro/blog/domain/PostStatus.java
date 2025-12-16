@@ -1,4 +1,4 @@
-package com.devtiro.blog.Domain;
+package com.devtiro.blog.domain;
 
 public enum PostStatus {
 

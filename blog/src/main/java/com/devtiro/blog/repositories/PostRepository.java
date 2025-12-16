@@ -1,10 +1,10 @@
 package com.devtiro.blog.repositories;
 
-import com.devtiro.blog.Domain.Entities.Category;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.Entities.Tag;
-import com.devtiro.blog.Domain.Entities.User;
-import com.devtiro.blog.Domain.PostStatus;
+import com.devtiro.blog.domain.Entities.Category;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.Entities.Tag;
+import com.devtiro.blog.domain.Entities.User;
+import com.devtiro.blog.domain.PostStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

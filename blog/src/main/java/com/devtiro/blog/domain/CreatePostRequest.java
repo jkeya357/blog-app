@@ -1,4 +1,4 @@
-package com.devtiro.blog.Domain;
+package com.devtiro.blog.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

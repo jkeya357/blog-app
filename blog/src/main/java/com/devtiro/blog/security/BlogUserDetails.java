@@ -1,6 +1,6 @@
 package com.devtiro.blog.security;
 
-import com.devtiro.blog.Domain.Entities.User;
+import com.devtiro.blog.domain.Entities.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

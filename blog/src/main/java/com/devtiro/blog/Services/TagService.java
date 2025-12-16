@@ -1,6 +1,6 @@
 package com.devtiro.blog.Services;
 
-import com.devtiro.blog.Domain.Entities.Tag;
+import com.devtiro.blog.domain.Entities.Tag;
 
 import java.util.List;
 import java.util.Set;

@@ -1,6 +1,5 @@
-package com.devtiro.blog.Domain.Dtos;
+package com.devtiro.blog.domain.Dtos;
 
-import com.devtiro.blog.Domain.Entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

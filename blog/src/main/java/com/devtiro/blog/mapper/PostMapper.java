@@ -1,11 +1,11 @@
-package com.devtiro.blog.Mappers;
+package com.devtiro.blog.mapper;
 
-import com.devtiro.blog.Domain.CreatePostRequest;
-import com.devtiro.blog.Domain.Dtos.CreatePostRequestDto;
-import com.devtiro.blog.Domain.Dtos.PostDto;
-import com.devtiro.blog.Domain.Dtos.UpdatePostRequestDto;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.UpdatePostRequest;
+import com.devtiro.blog.domain.CreatePostRequest;
+import com.devtiro.blog.domain.Dtos.CreatePostRequestDto;
+import com.devtiro.blog.domain.Dtos.PostDto;
+import com.devtiro.blog.domain.Dtos.UpdatePostRequestDto;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.UpdatePostRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;

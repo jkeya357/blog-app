@@ -1,9 +1,9 @@
 package com.devtiro.blog.Services;
 
-import com.devtiro.blog.Domain.CreatePostRequest;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.Entities.User;
-import com.devtiro.blog.Domain.UpdatePostRequest;
+import com.devtiro.blog.domain.CreatePostRequest;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.Entities.User;
+import com.devtiro.blog.domain.UpdatePostRequest;
 
 import java.util.List;
 import java.util.UUID;

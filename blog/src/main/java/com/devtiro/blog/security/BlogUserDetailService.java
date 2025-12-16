@@ -1,6 +1,6 @@
 package com.devtiro.blog.security;
 
-import com.devtiro.blog.Domain.Entities.User;
+import com.devtiro.blog.domain.Entities.User;
 import com.devtiro.blog.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

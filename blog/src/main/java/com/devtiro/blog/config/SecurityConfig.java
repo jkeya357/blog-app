@@ -1,6 +1,5 @@
 package com.devtiro.blog.config;
 
-import com.devtiro.blog.Domain.Entities.User;
 import com.devtiro.blog.Services.AuthenticationService;
 import com.devtiro.blog.repositories.UserRepository;
 import com.devtiro.blog.security.BlogUserDetailService;

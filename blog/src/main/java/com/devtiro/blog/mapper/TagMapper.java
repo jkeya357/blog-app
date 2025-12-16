@@ -1,9 +1,9 @@
-package com.devtiro.blog.Mappers;
+package com.devtiro.blog.mapper;
 
-import com.devtiro.blog.Domain.Dtos.TagDto;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.Entities.Tag;
-import com.devtiro.blog.Domain.PostStatus;
+import com.devtiro.blog.domain.Dtos.TagDto;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.Entities.Tag;
+import com.devtiro.blog.domain.PostStatus;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

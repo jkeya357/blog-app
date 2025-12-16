@@ -1,6 +1,6 @@
-package com.devtiro.blog.Controllers;
+package com.devtiro.blog.controller;
 
-import com.devtiro.blog.Domain.Dtos.ApiErrorResponse;
+import com.devtiro.blog.domain.Dtos.ApiErrorResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

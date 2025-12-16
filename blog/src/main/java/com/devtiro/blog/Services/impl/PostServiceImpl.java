@@ -1,12 +1,12 @@
 package com.devtiro.blog.Services.impl;
 
-import com.devtiro.blog.Domain.CreatePostRequest;
-import com.devtiro.blog.Domain.Entities.Category;
-import com.devtiro.blog.Domain.Entities.Post;
-import com.devtiro.blog.Domain.Entities.Tag;
-import com.devtiro.blog.Domain.Entities.User;
-import com.devtiro.blog.Domain.PostStatus;
-import com.devtiro.blog.Domain.UpdatePostRequest;
+import com.devtiro.blog.domain.CreatePostRequest;
+import com.devtiro.blog.domain.Entities.Category;
+import com.devtiro.blog.domain.Entities.Post;
+import com.devtiro.blog.domain.Entities.Tag;
+import com.devtiro.blog.domain.Entities.User;
+import com.devtiro.blog.domain.PostStatus;
+import com.devtiro.blog.domain.UpdatePostRequest;
 import com.devtiro.blog.Services.CategoryService;
 import com.devtiro.blog.Services.PostService;
 import com.devtiro.blog.Services.TagService;

@@ -1,4 +1,4 @@
-package com.devtiro.blog.Domain.Entities;
+package com.devtiro.blog.domain.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
