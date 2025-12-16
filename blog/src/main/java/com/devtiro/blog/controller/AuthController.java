@@ -22,8 +22,6 @@ import java.util.UUID;
 public class AuthController {
 
     private final AuthenticationService authenticationService;
-    private final UserMapper userMapper;
-    private final UserRepository userRepository;
 
     @PostMapping
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest loginRequest) {
@@ -43,23 +41,4 @@ public class AuthController {
         return ResponseEntity.ok(authResponse);
     }
 
-    @PostMapping("/refresh")
-    public ResponseEntity<AuthResponse> refresh(@RequestBody Map<String, String> request){
-
-        String refreshToken = request.get("refreshToken");
-
-        UserDetails userDetails = authenticationService.validateRefreshToken(refreshToken);
-        User user = userRepository.findByEmail(userDetails.getUsername())
-                .orElseThrow(() -> new UsernameNotFoundException("user not found"));
-
-        String newAccessToken = authenticationService.generateToken(user);
-
-        return ResponseEntity.ok(
-                AuthResponse.builder()
-                        .userId(user.getId())
-                        .token(newAccessToken)
-                        .expiresIn(86400)
-                        .build()
-        );
-    }
 }
