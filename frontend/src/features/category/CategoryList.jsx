@@ -19,7 +19,7 @@ const CategoryList = () => {
       <div className="flex items-center justify-between px-2">
         <div>
           <h2 className="text-2xl font-semibold text-white">Your Categories</h2>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-600">
             {categories.length} categories found
           </p>
         </div>
