@@ -1,11 +1,11 @@
-import { apiSlice } from "../../app/api/apiSlice";
+import { blogApi } from "../../app/api/blogApi";
 import { createEntityAdapter, createSelector } from "@reduxjs/toolkit";
 
 const tagAdapter = createEntityAdapter()
 
 const initialState = tagAdapter.getInitialState({})
 
-const tagApiSlice = apiSlice.injectEndpoints({
+const tagApiSlice = blogApi.injectEndpoints({
   endpoints: builder => ({
     getTags: builder.query({
       query: () => "/tags",

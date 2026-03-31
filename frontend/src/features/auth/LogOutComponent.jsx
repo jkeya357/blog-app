@@ -5,64 +5,85 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const LogOutComponent = () => {
-
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const [isOpen, setIsOpen] = useState(false)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleLogout = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      await dispatch(logout())
-      navigate("/")
+      await dispatch(logout());
+      navigate("/");
     } catch (error) {
       return;
     }
-  }
+  };
 
   return (
     <>
-      {/* Logout Button */}
+      {/* ✅ Logout Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg shadow transition duration-200"
+        className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-red-600/90 px-4 py-2 text-sm font-medium text-white hover:bg-red-600 transition"
       >
-        <LogOut size={20} />
-        Log Out
+        <LogOut size={18} />
+        Log out
       </button>
 
-      {/* Modal */}
+      {/* ✅ Modal ONLY when open */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-gray-900 text-white rounded-lg w-full max-w-sm p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          
+          {/* Backdrop */}
+          <div
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          />
+
+          {/* Modal Card */}
+          <div className="relative z-10 w-full max-w-md mx-4 rounded-xl border border-gray-800 bg-gray-950 p-6 shadow-2xl animate-in fade-in zoom-in-95">
+            
+            {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-3 right-3 text-gray-400 hover:text-white"
+              className="absolute right-4 top-4 text-gray-400 hover:text-white transition"
             >
-              <X size={20} />
+              <X size={18} />
             </button>
-            <h2 className="text-xl font-semibold mb-4">Confirm Logout</h2>
-            <p className="mb-6">Are you sure you want to log out?</p>
-            <div className="flex justify-end gap-2">
+
+            {/* Content */}
+            <div className="space-y-4">
+              <h2 className="text-lg font-semibold text-white">
+                Confirm Logout
+              </h2>
+
+              <p className="text-sm text-gray-400">
+                Are you sure you want to log out? You’ll need to sign in again to access your account.
+              </p>
+            </div>
+
+            {/* Actions */}
+            <div className="mt-6 flex justify-end gap-3">
               <button
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-2 bg-gray-600 rounded hover:bg-gray-700"
+                className="rounded-md border border-gray-700 bg-gray-900 px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 transition"
               >
                 Cancel
               </button>
+
               <button
                 onClick={handleLogout}
-                className="px-4 py-2 bg-red-600 rounded hover:bg-red-700"
+                className="rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 transition"
               >
-                Log Out
+                Log out
               </button>
             </div>
           </div>
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default LogOutComponent
+export default LogOutComponent;

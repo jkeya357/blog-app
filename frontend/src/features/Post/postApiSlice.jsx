@@ -1,4 +1,4 @@
-import { apiSlice } from "../../app/api/apiSlice";
+import { blogApi } from "../../app/api/blogApi";
 import { createEntityAdapter, createSelector } from "@reduxjs/toolkit";
 import { setCredentials } from "../auth/authSlice";
 
@@ -6,7 +6,7 @@ const postAdapter = createEntityAdapter({})
 
 const initialState = postAdapter.getInitialState()
 
-const postApiSlice = apiSlice.injectEndpoints({
+const postApiSlice = blogApi.injectEndpoints({
   endpoints: builder => ({
     getPosts: builder.query({
       query: () => "/posts",

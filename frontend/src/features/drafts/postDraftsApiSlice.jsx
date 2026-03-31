@@ -1,11 +1,11 @@
-import { apiSlice } from "../../app/api/apiSlice";
+import { blogApi } from "../../app/api/blogApi";
 import { createEntityAdapter } from "@reduxjs/toolkit";
 
 const draftPostsAdapter = createEntityAdapter()
 
 const initialDrafts = draftPostsAdapter.getInitialState({})
 
-const draftsApiSlice = apiSlice.injectEndpoints({
+const draftsApiSlice = blogApi.injectEndpoints({
   endpoints: builder => ({
     getDrafts: builder.query({
       query: (userId) => `/posts/drafts/${userId}`,

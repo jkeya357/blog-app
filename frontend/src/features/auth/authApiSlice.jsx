@@ -1,33 +1,31 @@
-import { apiSlice } from "../../app/api/apiSlice";
-import { logout } from "./authSlice";
 
-const authApiSlice = apiSlice.injectEndpoints({
+import {blogApi} from "../../app/api/blogApi"
+
+const authApiSlice = blogApi.injectEndpoints({
   endpoints: builder => ({
     login: builder.mutation({
-      query: credentials => ({
-        url: "/auth/login",
+      query: (credentials) => ({
+        url: "/auth/signin",
         method: "POST",
         body: {...credentials}
-      })
-    }),
-    sendLogout: builder.mutation({
-      query: () => ({
-        url: "/logout",
-        method: "POST"
       }),
-      async onQueryStarted(arg, {dispatch, queryFulfilled}){
-          try {
-            await queryFulfilled
-            dispatch(logout())
-            setTimeout(() => {
-              apiSlice.util.resetApiState()
-            }, 1000)
-          } catch (error) {
-            console.log("There was an error logging out",error)
-          }
-      }
+      invalidateTags: () => [{type: "User", id: "LIST"}]
+    }),
+    signup: builder.mutation({
+      query: (requestBody) => ({
+        url: "/auth/signup",
+        method: "POST",
+        body: {...requestBody}
+      }),
+      invalidateTags: () => [{type: "User", id: "LIST"}]
+    }),
+    refresh: builder.mutation({
+      query: () => ({
+        url: "/auth/refresh",
+        method: "POST"
+      })
     })
   })
 })
 
-export const {useLoginMutation, useLogoutMutation} = authApiSlice
+export const {useLoginMutation, useSignupMutation, useRefreshMutation} = authApiSlice

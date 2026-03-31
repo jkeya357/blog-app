@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
-import { apiSlice } from "./api/apiSlice"
+import { blogApi } from "./api/blogApi"
 import authSliceReducer from "../features/auth/authSlice"
 
 export const store = configureStore({
   reducer: {
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    [blogApi.reducerPath]: blogApi.reducer,
     auth: authSliceReducer
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
+    getDefaultMiddleware().concat(blogApi.middleware),
   devTools: process.env.NODE_ENV !== "production"
 })
 

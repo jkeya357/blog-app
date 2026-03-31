@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setCredentials, logout } from "../../features/auth/authSlice";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://blog-app-du36.onrender.com/api/v1',
+  baseUrl: 'http://localhost:4000/api/v1',
   credentials: 'include',
   prepareHeaders: (headers, {getState}) => {
     const token = getState().auth.token
@@ -35,7 +35,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
   return result
 }
 
-export const apiSlice = createApi({
+export const blogApi = createApi({
   baseQuery: baseQueryWithReauth,
   tagTypes: ["User", "Category", "Tag", "Post", "Drafts"],
   endpoints: builder => ({})

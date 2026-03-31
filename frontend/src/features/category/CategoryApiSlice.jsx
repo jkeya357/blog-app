@@ -1,13 +1,13 @@
-import { apiSlice } from "../../app/api/apiSlice";
+import { blogApi } from "../../app/api/blogApi";
 import { createEntityAdapter, createSelector } from "@reduxjs/toolkit";
 
 const categoryAdapter = createEntityAdapter()
 const initialState = categoryAdapter.getInitialState({})
 
-const categoryApiSlice = apiSlice.injectEndpoints({
+const categoryApiSlice = blogApi.injectEndpoints({
   endpoints: builder => ({
     getCategories: builder.query({
-      query: () => "/categories",
+      query: () => "/categories/all",
       transformResponse: responseData => {
         return categoryAdapter.setAll(initialState, responseData)
       },
@@ -22,7 +22,7 @@ const categoryApiSlice = apiSlice.injectEndpoints({
     }),
     createCategory: builder.mutation({
       query: initialCategory => ({
-        url: "/categories",
+        url: "/categories/create",
         method: "POST",
         body: {...initialCategory}
       }),
