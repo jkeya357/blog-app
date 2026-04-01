@@ -30,8 +30,6 @@ const Login = () => {
     e.preventDefault()
 
     try {
-      const {token, userId} = await login({email, password}).unwrap()
-      console.log("Your accessToken is", token, userId)
       dispatch(setCredentials({token, userId}))
       setEmail('')
       setPassword('')
