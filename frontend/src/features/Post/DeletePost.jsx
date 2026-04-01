@@ -10,7 +10,6 @@ const DeletePost = ({id}) => {
       try {
         await deletePost(id)
       } catch (error) {
-        console.log("There was an error deleting the post: ",error)
       }
     }
   }

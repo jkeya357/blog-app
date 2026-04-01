@@ -20,7 +20,6 @@ const CreateCategory = ({onClose}) => {
       await createCategory({name}).unwrap()
       setName('')
     } catch (error) {
-      console.log("Error creating the category: ", error)
     }
   }
 

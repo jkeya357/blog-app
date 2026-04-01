@@ -22,7 +22,6 @@ const CreateTags = ({onClose}) => {
       await createTag({names: [name]}).unwrap()
       setName('')
     } catch (error) {
-      console.log("Error creating the tag: ", error)
     }
   }
 

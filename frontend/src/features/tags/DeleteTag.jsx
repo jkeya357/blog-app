@@ -12,15 +12,12 @@ const DeleteTag = ({id, postCount}) => {
      return;
     }
 
-    console.log("post id: ",id)
-
     if(window.confirm("Are you sure you want to delete the category ?")){
       
       try {
         await deleteTag(id).unwrap()
 
       } catch (error) {
-        console.log("There was an error deleting the tag: ", error)
       }
     }
   }

@@ -56,7 +56,6 @@ const EditDraft = ({onClose, post}) => {
 
         onClose()
       } catch (error) {
-        console.log("There was an error updating the post: ",error)
       }
     }
 

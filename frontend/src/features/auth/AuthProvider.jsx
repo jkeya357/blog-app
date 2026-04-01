@@ -21,8 +21,7 @@ const AuthProvider = ({children}) => {
             try {
                 const res = await refresh().unwrap()
                 dispatch(setCredentials({token: res.token, userId: res.userId}))
-            } catch (error) {
-                console.log("failed retrieving refresh token", error)      
+            } catch (error) {   
             }finally{
                 setIsInitializing(false)
             }   

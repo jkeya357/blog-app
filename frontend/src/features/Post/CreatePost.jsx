@@ -15,7 +15,6 @@ const CreatePost = ({onClose}) => {
   const tags = useSelector(selectAllTags)
   const categories = useSelector(selectAllCategories)
   const userId = useSelector((state) => state.auth.user)
-  console.log("User id", userId)
 
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
@@ -23,8 +22,6 @@ const CreatePost = ({onClose}) => {
   const [selectedTags, setSelectedTags] = useState([])
   const [status, setStatus] = useState("DRAFT")
   const [errMsg, setErrMsg] = useState()
-  console.log("Categories", categories)
-  console.log("tags", tags)
   
   const handleTagsChange = (e) => {
     const selected = Array.from(e.target.selectedOptions, (opt) => opt.value);
@@ -57,7 +54,6 @@ const CreatePost = ({onClose}) => {
       setStatus("DRAFT");
       setErrMsg("");
     } catch (error) {
-      console.error("Failed to create post:", error);
       setErrMsg("Something went wrong while creating the post.");
     }
   }

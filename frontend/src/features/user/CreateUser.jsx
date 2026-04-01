@@ -10,7 +10,6 @@ const CreateUser = () => {
   const dispatch = useDispatch()
 
   const [signup, {isSuccess, isLoading}] = useSignupMutation()
-  console.log("SIGN UP MUTATION: ",useSignupMutation())
 
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
@@ -22,7 +21,6 @@ const CreateUser = () => {
 
     try {
       const res = await signup({email, password, name}).unwrap()
-      console.log("RESPONSE FROM CREATE REQUEST: ", res)
       alert("User created successfully")
       setEmail('')
       setPassword('')
@@ -31,7 +29,7 @@ const CreateUser = () => {
       navigate("/dash/home")
       
     } catch (error) {
-      setErrMsg(error?.data?.message || "Login failed... try again")
+      setErrMsg(error?.data?.message || "SignUp failed... try again")
     }
   }
 

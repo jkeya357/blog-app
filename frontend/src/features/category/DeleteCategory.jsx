@@ -17,7 +17,6 @@ const DeleteCategory = ({id, postCount}) => {
       try {
         await deleteCategory(id).unwrap()
       } catch (error) {
-        console.log("There was an error deleting the category", error)
       }
     }
   }

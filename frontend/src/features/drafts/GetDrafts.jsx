@@ -19,10 +19,6 @@ const GetDrafts = () => {
   const [editPost, {isLoading, isSuccess, isError, error}] = useEditPostMutation()
   const drafts = draftsData ? Object.values(draftsData.entities) : []
 
-  console.log("The user id", userId)
-  console.log("The drafts array: ",drafts)
-  console.log("Raw drafts data", draftsData)
-
   const [editPostId, setEditPostId] = useState(null)
 
   return (

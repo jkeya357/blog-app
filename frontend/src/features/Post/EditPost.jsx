@@ -16,11 +16,9 @@ const EditPost = ({onClose, postId}) => {
   const selectedPost = useSelector((state) => selectPostsById(state, postId))
   const allTags = useSelector(selectAllTags)
   const allCategories =  useSelector(selectAllCategories)
-  console.log('POST ID: ', selectedPost)
 
   
   if(!selectedPost){
-    console.log("No post selected!")
     return
   }
 
@@ -64,7 +62,6 @@ const EditPost = ({onClose, postId}) => {
 
       onClose()
     } catch (error) {
-      console.log("There was an error updating the post: ",error)
     }
   } 
 
