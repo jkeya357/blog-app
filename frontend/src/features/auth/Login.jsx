@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
 const Login = () => {
-
   const userRef = useRef()
   const errRef = useRef()
 
@@ -29,14 +28,17 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    const res = await login({email, password})
+    console.log("LOGIN RES: ",res.data.token, "USERID: ", res.data.userId)
+
     try {
-      dispatch(setCredentials({token, userId}))
+      dispatch(setCredentials({token: res.data.token, userId: res.data.userId}))
       setEmail('')
       setPassword('')
       navigate("/dash/home")
     } catch (error) {
       setErrMsg(error?.data?.message || "Login failed... try again")
-      errRef.current.focus()
+      errRef.current?.focus()
     }
     
   }
